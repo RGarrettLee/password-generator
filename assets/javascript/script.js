@@ -13,7 +13,7 @@ let pass = document.getElementById('password');
 let lowercases = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 let uppercases = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 let numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-let specials = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '+', '=', '{', '}', '[', ']', '|', ':', ';', '"', '?', '/', '.', ',']; 
+let specials = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '+', '=', '{', '}', '[', ']', '|', ':', ';', '"', '?', '/', '.', ','];
 
 btn.onclick = function() {
     modal.style.display = 'block';
@@ -31,7 +31,6 @@ window.onclick = function(event) {
 
 function generatePassword (len, upper, lower, num, spec) {
     let generatedPassword = '';
-    let valid = false;
     let checks = 0;
 
     let characterPool = []
@@ -68,8 +67,6 @@ function generatePassword (len, upper, lower, num, spec) {
         }
         generatedPassword += characterPool[Math.floor(Math.random() * characterPool.length)];
     }
-
-    console.log(generatedPassword);
 
     return generatedPassword;
 }
