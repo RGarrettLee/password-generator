@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Password Generator</title>
+        <meta name="description" content="A password generator made in JS">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./assets/css/style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Password Generator</h1>
+        </header>
+        <section class="container">
+            <h2>Generate A Password</h2>
+            <section class="password-box">
+                <p id="password">Your Secure Password</p>
+            </section>
+            <article>
+                <button type="button" id="generate">Generate Password</button>
+            </article>
+            <section id="modal" class="modal">
+                <section class="modal-content">
+                    <span class="close">❌</span>
+                    <label for="length">Password Length</label>
+                    <input class="center" type="text" id="length" length=25 placeholder="8 - 128">
+                    <br>
+                    <label for="uppercase">Include Uppercase</label>
+                    <input type="checkbox" id="uppercase">
+                    <br>
+                    <label for="lowercase">Include Lowercase</label>
+                    <input type="checkbox" id="lowercase">
+                    <br>
+                    <label for="numeric">Include Numbers</label>
+                    <input type="checkbox" id="numeric">
+                    <br>
+                    <label for="special">Include Special Characters</label>
+                    <input type="checkbox" id="special">
+                    <br>
+                    <button type="submit" id="submit">Submit</button>
+                </section>
+            </section>
+        </section>
+        <script src="./assets/javascript/script.js" async defer></script>
+    </body>
+</html>
