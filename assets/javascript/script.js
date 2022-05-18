@@ -67,6 +67,7 @@ function generatePassword (len, upper, lower, num, spec) { // function to genera
     return generatedPassword; // return the generated password
 }
 
+document.getElementBy
 
 submit.onclick = function() { // when the submit button is clicked, validate user input and then generate password
     let length = document.getElementById('length').value; // create variable to store user input for password length
@@ -78,6 +79,9 @@ submit.onclick = function() { // when the submit button is clicked, validate use
     if (isNaN(length) || length.length == 0) { // if user input length is Not A Number or is empty
         alert('Your length input is invalid'); // alert user that their input is invalid
         return; // exit function
+    } else if (length.length < 8 || length.length > 128){
+        alert('Your length input is too short or too long'); // alert user that their input is invalid
+        return;
     }
 
     if (!uppercase && !lowercase) { // if user hasn't chosen any character type
