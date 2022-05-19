@@ -34,33 +34,22 @@ function generatePassword (len, upper, lower, num, spec) { // function to genera
     if (upper) { // if uppercase was selected
         characterPool = characterPool.concat(uppercases); // add uppercase letters to character pool
         checks++; // increase check count
+        generatedPassword += uppercases[Math.floor(Math.random() * uppercases.length)]; // add a random uppercase letter to the generated password
     } if (lower) { // if lowercase was selected
         characterPool = characterPool.concat(lowercases); // add lowercase letters to character pool
         checks++; // increase check count
+        generatedPassword += lowercases[Math.floor(Math.random() * lowercases.length)]; // add a random lowercase letter to the generated password
     } if (num) { // if numeric was selected
         characterPool = characterPool.concat(numbers); // add numeric characters to character pool
         checks++; // increase check count
+        generatedPassword += numbers[Math.floor(Math.random() * numbers.length)]; // add a random numeric character to the generated password
     } if (spec) { // if special was selected
         characterPool = characterPool.concat(specials); // add special characters to character pool
         checks++; // increase check count
+        generatedPassword += specials[Math.floor(Math.random() * specials.length)]; // add a random special character to the generated password
     }
 
     for (let i = checks; i < len; i++) { // starting from the number of character types selected, add random characters from the pool to the generated password string
-        if (checks != 0) { // if there are still character types to add to the password
-            if (upper) { // if uppercase was selected
-                generatedPassword += uppercases[Math.floor(Math.random() * uppercases.length)]; // add a random uppercase letter to the generated password
-                checks--; // decrease check count
-            } if (lower) { // if lowercase was selected
-                generatedPassword += lowercases[Math.floor(Math.random() * lowercases.length)]; // add a random lowercase letter to the generated password
-                checks--; // decrease check count
-            } if (num) { // if numeric was selected
-                generatedPassword += numbers[Math.floor(Math.random() * numbers.length)]; // add a random numeric character to the generated password
-                checks--; // decrease check count
-            } if (spec) { // if special was selected
-                generatedPassword += specials[Math.floor(Math.random() * specials.length)]; // add a random special character to the generated password
-                checks--; // decrease check count
-            }
-        }
         generatedPassword += characterPool[Math.floor(Math.random() * characterPool.length)]; // if the criteria is met, add random characters from the pool to the generated password string
     }
 
