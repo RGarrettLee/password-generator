@@ -20,4 +20,4 @@ The criteria we allow users to choose are:
 --- 
 ## Live demo of the site in action
 
-![site in action](./assets/images/Password%20Generator.gif)
+![site in action](./assets/images/sitedemo.gif)
