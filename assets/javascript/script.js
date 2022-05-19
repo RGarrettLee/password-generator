@@ -74,12 +74,12 @@ submit.onclick = function() { // when the submit button is clicked, validate use
     let numeric = document.getElementById('numeric').checked; // create variable to store user input for numeric characters
     let special = document.getElementById('special').checked; // create variable to store user input for special characters
     
-    if (isNaN(length) || length.length == 0) { // if user input length is Not A Number or is empty
+    if (isNaN(length) || length.length === 0) { // if user input length is Not A Number or is empty
         alert('Your length input is invalid'); // alert user that their input is invalid
         return; // exit function
     } else if (parseInt(length) < 8 || parseInt(length) > 128) {
         alert('Your length input is too short or too long'); // alert user that their input is invalid
-        return;
+        return; // exit function
     }
 
     if (!uppercase && !lowercase) { // if user hasn't chosen any character type
