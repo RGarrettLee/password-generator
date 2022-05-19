@@ -9,7 +9,7 @@ let pass = document.getElementById('password'); // creating variable to interact
 let lowercases = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']; // creating lowercase letter array
 let uppercases = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']; // creating uppercase letter array
 let numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']; // creating numeric character array
-let specials = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '+', '=', '{', '}', '[', ']', '|', ':', ';', '"', '?', '/', '.', ',']; // creating special character array
+let specials = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '+', '=', '{', '}', '[', ']', '<', '>', '|', ':', ';', '"', '?', '/', '.', ',']; // creating special character array
 
 btn.onclick = function() { // when generate button is clicked, display modal contents
     modal.style.display = 'block';
@@ -90,5 +90,5 @@ submit.onclick = function() { // when the submit button is clicked, validate use
     // if the user input is valid
 
     modal.style.display = 'none'; // close modal
-    pass.innerHTML = generatePassword(length, uppercase, lowercase, numeric, special); // modify passworld field to display the generated password
+    pass.value = generatePassword(length, uppercase, lowercase, numeric, special); // modify passworld field to display the generated password
 }
